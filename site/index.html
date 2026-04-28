@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GPT Image Wiki</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <span class="brand-kicker">Tool Island</span>
+          <h1>GPT Image Wiki</h1>
+          <p>案例库、模板库、Builder、课程模式。</p>
+        </div>
+        <nav class="nav">
+          <button class="nav-item is-active" data-view="dashboard">总览</button>
+          <button class="nav-item" data-view="cases">案例</button>
+          <button class="nav-item" data-view="templates">模板</button>
+          <button class="nav-item" data-view="builder">Builder</button>
+          <button class="nav-item" data-view="teaching">课程</button>
+        </nav>
+        <section class="sidebar-panel">
+          <h2>全局搜索</h2>
+          <input id="globalSearch" type="search" placeholder="搜案例、模板、来源、关键词" />
+          <p class="hint">搜索会同时作用在案例与模板页。</p>
+        </section>
+        <section class="sidebar-panel">
+          <h2>分类</h2>
+          <div id="categoryList" class="category-list"></div>
+        </section>
+      </aside>
+
+      <main class="main" id="mainContent">
+        <header class="topbar" id="mainTopbar">
+          <div>
+            <p class="eyebrow">教学型 Wiki</p>
+            <h2 id="viewTitle">总览</h2>
+          </div>
+          <div class="topbar-actions">
+            <button id="exportCurrent" class="secondary-btn">导出当前页面 Markdown</button>
+          </div>
+        </header>
+
+        <section id="dashboardView" class="view is-active"></section>
+        <section id="casesView" class="view"></section>
+        <section id="templatesView" class="view"></section>
+        <section id="builderView" class="view"></section>
+        <section id="teachingView" class="view"></section>
+      </main>
+    </div>
+
+    <template id="statCardTemplate">
+      <article class="stat-card">
+        <span class="stat-label"></span>
+        <strong class="stat-value"></strong>
+        <p class="stat-note"></p>
+      </article>
+    </template>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+  </html>

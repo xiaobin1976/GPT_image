@@ -1,0 +1,10 @@
+{
+  "name": "gpt-image-wiki",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "ingest": "node scripts/ingest-repo.mjs",
+    "serve": "node server.mjs"
+  }
+}
